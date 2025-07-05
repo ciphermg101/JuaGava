@@ -133,8 +133,54 @@ export const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-8">
       <Helmet>
-        <title>Dashboard - JuaGava Kenyan Civic Platform</title>
-        <meta name="description" content="Your personalized dashboard for Kenyan civic learning, progress tracking, and community engagement." />
+        <title>Dashboard - JuaGava Kenyan Civic Platform | Your Learning Hub</title>
+        <meta name="description" content="Your personalized dashboard for Kenyan civic learning, progress tracking, and community engagement. Track your achievements and continue your civic education journey." />
+        <meta name="keywords" content="dashboard, civic learning, progress tracking, Kenyan civic education, learning hub, achievements, community engagement, personal learning, civic progress, Kenya citizenship, civic participation, learning achievements, community involvement, civic knowledge tracking" />
+        <meta name="author" content="JuaGava Civic Platform" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="language" content="English" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Dashboard - JuaGava Kenyan Civic Platform | Your Learning Hub" />
+        <meta property="og:description" content="Your personalized dashboard for Kenyan civic learning, progress tracking, and community engagement." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://juagava.com/dashboard" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:site_name" content="JuaGava" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dashboard - JuaGava Kenyan Civic Platform | Your Learning Hub" />
+        <meta name="twitter:description" content="Your personalized dashboard for Kenyan civic learning." />
+        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:site" content="@juagava" />
+        
+        {/* Additional SEO */}
+        <meta name="theme-color" content="#009543" />
+        <meta name="msapplication-TileColor" content="#009543" />
+        <link rel="canonical" href="https://juagava.com/dashboard" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Dashboard - JuaGava Kenyan Civic Platform",
+            "description": "Personalized dashboard for civic learning and progress tracking",
+            "url": "https://juagava.com/dashboard",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "JuaGava",
+              "url": "https://juagava.com"
+            },
+            "mainEntity": {
+              "@type": "EducationalOrganization",
+              "name": "JuaGava",
+              "description": "Kenyan Civic Education Platform"
+            }
+          })}
+        </script>
       </Helmet>
       
       {/* Welcome Section */}
@@ -180,7 +226,7 @@ export const DashboardPage: React.FC = () => {
       </motion.div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {stats.map((stat, index) => (
           <motion.div
             key={stat.title}
@@ -198,7 +244,7 @@ export const DashboardPage: React.FC = () => {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         {/* Continue Learning */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -345,7 +391,7 @@ export const DashboardPage: React.FC = () => {
             </h2>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               {quickActions.map((action, index) => (
                 <Link key={action.title} to={action.href}>
                   <motion.div

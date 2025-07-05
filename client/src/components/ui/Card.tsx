@@ -22,14 +22,14 @@ export const Card: React.FC<CardProps> = ({
   onClick,
   interactive = false
 }) => {
-  const baseClasses = 'rounded-2xl transition-all duration-300'
+  const baseClasses = 'rounded-xl sm:rounded-2xl transition-all duration-300'
   
   const variantClasses = {
-    default: 'bg-white dark:bg-neutral-800 shadow-soft border border-neutral-200 dark:border-neutral-700',
+    default: 'bg-white dark:bg-neutral-800 shadow-soft border border-neutral-300 dark:border-neutral-700',
     kenya: 'bg-gradient-to-br from-kenya-green/5 to-kenya-red/5 dark:from-kenya-green/10 dark:to-kenya-red/10 border border-kenya-green/20 dark:border-kenya-red/20 shadow-soft',
     glass: 'bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm border border-white/20 dark:border-neutral-700/20 shadow-soft',
-    elevated: 'bg-white dark:bg-neutral-800 shadow-large border border-neutral-200 dark:border-neutral-700',
-    outlined: 'bg-transparent border-2 border-neutral-200 dark:border-neutral-700 shadow-none'
+    elevated: 'bg-white dark:bg-neutral-800 shadow-large border border-neutral-300 dark:border-neutral-700',
+    outlined: 'bg-transparent border-2 border-neutral-300 dark:border-neutral-700 shadow-none'
   }
   
   const hoverClasses = hover ? 'hover:shadow-medium hover:transform hover:scale-[1.02] hover:-translate-y-1 cursor-pointer' : ''
@@ -96,12 +96,12 @@ export const CardHeader: React.FC<{
   variant = 'default'
 }) => {
   const variantClasses = {
-    default: 'border-neutral-200 dark:border-neutral-700',
+    default: 'border-neutral-300 dark:border-neutral-700',
     kenya: 'border-kenya-green/20 dark:border-kenya-red/20'
   }
   
   return (
-    <div className={`px-6 py-5 border-b ${variantClasses[variant]} ${className}`}>
+    <div className={`px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 border-b ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
   )
@@ -117,9 +117,9 @@ export const CardContent: React.FC<{
   padding = 'md'
 }) => {
   const paddingClasses = {
-    sm: 'px-4 py-3',
-    md: 'px-6 py-5',
-    lg: 'px-8 py-6'
+    sm: 'px-3 sm:px-4 py-2 sm:py-3',
+    md: 'px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5',
+    lg: 'px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8'
   }
   
   return (
@@ -139,12 +139,12 @@ export const CardFooter: React.FC<{
   variant = 'default'
 }) => {
   const variantClasses = {
-    default: 'border-neutral-200 dark:border-neutral-700',
+    default: 'border-neutral-300 dark:border-neutral-700',
     kenya: 'border-kenya-green/20 dark:border-kenya-red/20'
   }
   
   return (
-    <div className={`px-6 py-5 border-t ${variantClasses[variant]} ${className}`}>
+    <div className={`px-3 sm:px-4 md:px-6 py-3 sm:py-4 md:py-5 border-t ${variantClasses[variant]} ${className}`}>
       {children}
     </div>
   )

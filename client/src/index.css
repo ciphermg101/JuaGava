@@ -44,23 +44,23 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium px-6 py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none;
   }
   
   .btn-secondary {
-    @apply bg-neutral-100 hover:bg-neutral-200 text-neutral-900 font-medium px-6 py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-100;
+    @apply bg-neutral-100 hover:bg-neutral-200 text-neutral-900 font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-100;
   }
   
   .btn-outline {
-    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-medium px-6 py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
   .btn-kenya {
-    @apply bg-gradient-to-r from-kenya-green to-kenya-red text-white font-medium px-6 py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-kenya-gold focus:ring-offset-2;
+    @apply bg-gradient-to-r from-kenya-green to-kenya-red text-white font-medium px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-kenya-gold focus:ring-offset-2;
   }
   
   .card {
-    @apply bg-white dark:bg-neutral-800 rounded-2xl shadow-soft hover:shadow-medium border border-neutral-200 dark:border-neutral-700 transition-all duration-300;
+    @apply bg-white dark:bg-neutral-800 rounded-xl sm:rounded-2xl shadow-soft hover:shadow-medium border border-neutral-300 dark:border-neutral-700 transition-all duration-300;
   }
   
   .card-hover {
@@ -72,7 +72,7 @@
   }
   
   .input-field {
-    @apply w-full px-4 py-3 border border-neutral-300 dark:border-neutral-600 rounded-xl shadow-sm bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 placeholder-neutral-500 dark:placeholder-neutral-400;
+    @apply w-full px-3 sm:px-4 py-2 sm:py-3 border border-neutral-300 dark:border-neutral-600 rounded-lg sm:rounded-xl shadow-sm bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-300 placeholder-neutral-500 dark:placeholder-neutral-400;
   }
 
   .input-field-error {
@@ -80,7 +80,7 @@
   }
   
   .section-divider {
-    @apply border-t border-neutral-200 dark:border-neutral-700 my-8;
+    @apply border-t border-neutral-300 dark:border-neutral-700 my-6 sm:my-8;
   }
   
   .gradient-bg {
@@ -101,7 +101,7 @@
 
   /* Theme toggle button */
   .theme-toggle {
-    @apply p-3 rounded-full bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm border border-neutral-200 dark:border-neutral-700 shadow-soft hover:shadow-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500;
+    @apply p-2 sm:p-3 rounded-full bg-white/80 dark:bg-neutral-800/80 backdrop-blur-sm border border-neutral-300 dark:border-neutral-700 shadow-soft hover:shadow-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500;
   }
 
   /* Loading skeleton */
@@ -183,20 +183,33 @@
 
   /* Responsive text sizes */
   .text-responsive-xl {
-    @apply text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
   }
 
   .text-responsive-lg {
-    @apply text-xl md:text-2xl lg:text-3xl;
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
   }
 
   .text-responsive-md {
-    @apply text-lg md:text-xl lg:text-2xl;
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl;
+  }
+
+  .text-responsive-sm {
+    @apply text-base sm:text-lg md:text-xl;
   }
 
   /* Container utilities */
   .container-kenya {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Mobile-first responsive padding */
+  .section-padding {
+    @apply py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-6 sm:py-8 md:py-12 lg:py-16;
   }
 
   /* Grid utilities */
@@ -206,6 +219,15 @@
 
   .grid-auto-fill {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+
+  /* Mobile responsive grid */
+  .grid-mobile-responsive {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6;
+  }
+
+  .grid-mobile-responsive-2 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6;
   }
 
   /* Focus utilities */
@@ -218,10 +240,125 @@
     @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
   }
 
+  /* Mobile navigation improvements */
+  .mobile-nav-item {
+    @apply block w-full px-3 sm:px-4 py-2 sm:py-3 text-left rounded-lg transition-all duration-200;
+  }
+
+  /* Mobile card improvements */
+  .mobile-card {
+    @apply p-3 sm:p-4 md:p-6;
+  }
+
+  /* Mobile button improvements */
+  .mobile-btn {
+    @apply w-full sm:w-auto justify-center;
+  }
+
   /* Print utilities */
   @media print {
     .print-hidden {
       @apply hidden;
     }
   }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    .mobile-stack {
+      @apply flex-col space-y-3 sm:space-y-4;
+    }
+    
+    .mobile-center {
+      @apply text-center;
+    }
+    
+    .mobile-full {
+      @apply w-full;
+    }
+
+    .mobile-text-sm {
+      @apply text-sm;
+    }
+
+    .mobile-text-base {
+      @apply text-base;
+    }
+
+    .mobile-p-3 {
+      @apply p-3;
+    }
+
+    .mobile-p-4 {
+      @apply p-4;
+    }
+
+    .mobile-gap-3 {
+      @apply gap-3;
+    }
+
+    .mobile-gap-4 {
+      @apply gap-4;
+    }
+  }
+
+  /* Tablet-specific improvements */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .tablet-text-lg {
+      @apply text-lg;
+    }
+
+    .tablet-p-4 {
+      @apply p-4;
+    }
+
+    .tablet-p-6 {
+      @apply p-6;
+    }
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }

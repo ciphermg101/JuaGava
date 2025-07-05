@@ -132,8 +132,49 @@ export const AuthPage: React.FC = () => {
   return (
     <div className="min-h-screen gradient-bg-kenya flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>Sign In / Sign Up - JuaGava Kenyan Civic Platform</title>
-        <meta name="description" content="Join JuaGava to start your Kenyan civic education journey. Learn about government, democracy, and civic participation." />
+        <title>Sign In / Sign Up - JuaGava Kenyan Civic Platform | Join the Learning Community</title>
+        <meta name="description" content="Join JuaGava to start your Kenyan civic education journey. Learn about government, democracy, and civic participation. Create your account or sign in to continue learning." />
+        <meta name="keywords" content="sign in, sign up, register, login, Kenyan civic education, civic participation, government learning, democracy education, Kenya citizenship, civic engagement, public participation, constitutional rights, voter education" />
+        <meta name="author" content="JuaGava Civic Platform" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="language" content="English" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Sign In / Sign Up - JuaGava Kenyan Civic Platform" />
+        <meta property="og:description" content="Join JuaGava to start your Kenyan civic education journey. Learn about government, democracy, and civic participation." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://juagava.com/auth" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:site_name" content="JuaGava" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sign In / Sign Up - JuaGava Kenyan Civic Platform" />
+        <meta name="twitter:description" content="Join JuaGava to start your Kenyan civic education journey." />
+        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:site" content="@juagava" />
+        
+        {/* Additional SEO */}
+        <meta name="theme-color" content="#009543" />
+        <meta name="msapplication-TileColor" content="#009543" />
+        <link rel="canonical" href="https://juagava.com/auth" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Sign In / Sign Up - JuaGava",
+            "description": "Join JuaGava to start your Kenyan civic education journey",
+            "url": "https://juagava.com/auth",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "JuaGava",
+              "url": "https://juagava.com"
+            }
+          })}
+        </script>
       </Helmet>
       
       <motion.div

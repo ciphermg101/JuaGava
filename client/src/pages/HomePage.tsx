@@ -117,12 +117,56 @@ export const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen gradient-bg-kenya">
       <Helmet>
-        <title>JuaGava - Kenyan Civic Education Platform</title>
-        <meta name="description" content="Learn about Kenya's government structure, civic processes, and democratic participation through interactive education." />
-        <meta name="keywords" content="Kenya government, civic education, democracy, devolution, county government, voting, constitution" />
+        <title>JuaGava - Kenyan Civic Education Platform | Learn Government & Democracy</title>
+        <meta name="description" content="Learn about Kenya's government structure, civic processes, and democratic participation through interactive education. Understand devolution, voting, and constitutional rights." />
+        <meta name="keywords" content="Kenya government, civic education, democracy, devolution, county government, voting, constitution, public participation, civic engagement, Kenyan democracy, government structure, electoral process, constitutional rights, local government, national assembly, senate, county assemblies" />
+        <meta name="author" content="JuaGava Civic Platform" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content="JuaGava - Kenyan Civic Education Platform" />
-        <meta property="og:description" content="Empowering Kenyans with civic education and government knowledge." />
+        <meta property="og:description" content="Empowering Kenyans with civic education and government knowledge through interactive learning experiences." />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://juagava.com/" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:site_name" content="JuaGava" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JuaGava - Kenyan Civic Education Platform" />
+        <meta name="twitter:description" content="Learn about Kenya's government structure, civic processes, and democratic participation." />
+        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:site" content="@juagava" />
+        
+        {/* Additional SEO */}
+        <meta name="theme-color" content="#009543" />
+        <meta name="msapplication-TileColor" content="#009543" />
+        <link rel="canonical" href="https://juagava.com/" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "EducationalOrganization",
+            "name": "JuaGava",
+            "description": "Kenyan Civic Education Platform",
+            "url": "https://juagava.com",
+            "logo": "https://juagava.com/logo.png",
+            "sameAs": [
+              "https://facebook.com/juagava",
+              "https://twitter.com/juagava",
+              "https://instagram.com/juagava"
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Nairobi",
+              "addressCountry": "KE"
+            }
+          })}
+        </script>
       </Helmet>
       
       {/* Hero Section */}
@@ -141,7 +185,7 @@ export const HomePage: React.FC = () => {
           <ThemeToggle size="lg" />
         </div>
 
-        <div className="container-kenya py-24 relative z-10">
+        <div className="container-kenya py-12 sm:py-16 md:py-20 lg:py-24 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -221,7 +265,7 @@ export const HomePage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto"
             >
               {kenyaStats.map((stat, index) => (
                 <motion.div
@@ -231,13 +275,13 @@ export const HomePage: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-kenya-green/10 to-kenya-red/10 dark:from-kenya-green/20 dark:to-kenya-red/20 rounded-2xl mb-4">
-                    <stat.icon className="h-8 w-8 text-kenya-green" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-kenya-green/10 to-kenya-red/10 dark:from-kenya-green/20 dark:to-kenya-red/20 rounded-xl sm:rounded-2xl mb-3 sm:mb-4">
+                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-kenya-green" />
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-1">
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-neutral-900 dark:text-neutral-100 mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
+                  <div className="text-xs sm:text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-1">
                     {stat.label}
                   </div>
                   <div className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -251,7 +295,7 @@ export const HomePage: React.FC = () => {
       </div>
 
       {/* Government Structure Section */}
-      <div className="py-24 bg-white/50 dark:bg-neutral-800/50 backdrop-blur-sm">
+      <div className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white/50 dark:bg-neutral-800/50 backdrop-blur-sm">
         <div className="container-kenya">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,7 +311,7 @@ export const HomePage: React.FC = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {governmentLevels.map((level, index) => (
               <motion.div
                 key={level.title}
@@ -277,9 +321,9 @@ export const HomePage: React.FC = () => {
               >
                 <Card className="h-full card-kenya hover:shadow-large">
                   <CardContent className="p-8">
-                    <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${level.color} rounded-2xl mb-6`}>
-                      <level.icon className="h-8 w-8 text-white" />
-                    </div>
+                                      <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br ${level.color} rounded-xl sm:rounded-2xl mb-4 sm:mb-6`}>
+                    <level.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
+                  </div>
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 font-display">
                       {level.title}
                     </h3>

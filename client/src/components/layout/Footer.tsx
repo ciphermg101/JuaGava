@@ -84,23 +84,23 @@ export const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800 border-t border-neutral-200 dark:border-neutral-700">
+    <footer className="bg-gradient-to-br from-neutral-50 to-neutral-100 dark:from-neutral-900 dark:to-neutral-800 border-t border-neutral-300 dark:border-neutral-700">
       {/* Newsletter Section */}
-      <div className="container-kenya py-12">
+      <div className="container-kenya py-6 sm:py-8 md:py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-kenya-green/10 to-kenya-red/10 dark:from-kenya-green/20 dark:to-kenya-red/20 rounded-2xl p-8 border border-kenya-green/20 dark:border-kenya-red/20"
+          className="bg-gradient-to-r from-kenya-green/10 to-kenya-red/10 dark:from-kenya-green/20 dark:to-kenya-red/20 rounded-2xl p-4 sm:p-6 md:p-8 border border-kenya-green/20 dark:border-kenya-red/20"
         >
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-4 font-display">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-3 sm:mb-4 font-display">
               Stay Updated on Civic Education
             </h3>
-            <p className="text-neutral-600 dark:text-neutral-400 mb-6">
+            <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 mb-4 sm:mb-6">
               Get the latest updates on civic education, government processes, and opportunities to engage with your community.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-md mx-auto">
               <Input
                 type="email"
                 placeholder="Enter your email address"
@@ -116,8 +116,8 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="container-kenya py-8 border-b border-neutral-200 dark:border-neutral-700">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="container-kenya py-4 sm:py-6 md:py-8 border-b border-neutral-300 dark:border-neutral-700">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -126,13 +126,13 @@ export const Footer: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="inline-flex items-center justify-center w-12 h-12 bg-kenya-green/10 dark:bg-kenya-green/20 rounded-xl mb-3">
-                <stat.icon className="h-6 w-6 text-kenya-green" />
+              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-kenya-green/10 dark:bg-kenya-green/20 rounded-xl mb-2 sm:mb-3">
+                <stat.icon className="h-5 w-5 sm:h-6 sm:w-6 text-kenya-green" />
               </div>
-              <div className="text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-1">
+              <div className="text-lg sm:text-xl md:text-2xl font-bold text-neutral-900 dark:text-neutral-100 mb-1">
                 {stat.value}
               </div>
-              <div className="text-sm text-neutral-600 dark:text-neutral-400">
+              <div className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
                 {stat.label}
               </div>
             </motion.div>
@@ -141,8 +141,8 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Main Footer Content */}
-      <div className="container-kenya py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="container-kenya py-6 sm:py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <motion.div
@@ -150,48 +150,48 @@ export const Footer: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center space-x-3 mb-4">
-                <div className="p-2 bg-gradient-to-br from-kenya-green to-kenya-red rounded-xl">
-                  <BookOpen className="h-6 w-6 text-white" />
+              <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+                <div className="p-1.5 sm:p-2 bg-gradient-to-br from-kenya-green to-kenya-red rounded-xl">
+                  <BookOpen className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                 </div>
-                <span className="text-xl font-bold text-neutral-900 dark:text-neutral-100 font-display">
+                <span className="text-lg sm:text-xl font-bold text-neutral-900 dark:text-neutral-100 font-display">
                   JuaGava
                 </span>
               </div>
-              <p className="text-neutral-600 dark:text-neutral-400 mb-6 text-sm leading-relaxed">
+              <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mb-4 sm:mb-6 leading-relaxed">
                 Empowering Kenyans with civic education and government knowledge through interactive learning experiences.
               </p>
               
               {/* Contact Info */}
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center space-x-3 text-sm text-neutral-600 dark:text-neutral-400">
-                  <MapPin size={16} />
+              <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
+                <div className="flex items-center space-x-2 sm:space-x-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <MapPin size={14} className="sm:w-4 sm:h-4" />
                   <span>Nairobi, Kenya</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-neutral-600 dark:text-neutral-400">
-                  <Mail size={16} />
+                <div className="flex items-center space-x-2 sm:space-x-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <Mail size={14} className="sm:w-4 sm:h-4" />
                   <span>contact@juagava.com</span>
                 </div>
-                <div className="flex items-center space-x-3 text-sm text-neutral-600 dark:text-neutral-400">
-                  <Phone size={16} />
+                <div className="flex items-center space-x-2 sm:space-x-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
+                  <Phone size={14} className="sm:w-4 sm:h-4" />
                   <span>+254 700 000 000</span>
                 </div>
               </div>
 
               {/* Social Links */}
-              <div className="flex space-x-3">
+              <div className="flex space-x-2 sm:space-x-3">
                 {socialLinks.map((social) => (
                   <motion.a
                     key={social.name}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-neutral-100 dark:bg-neutral-800 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors duration-300"
+                    className="p-1.5 sm:p-2 bg-neutral-100 dark:bg-neutral-800 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors duration-300"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     aria-label={social.name}
                   >
-                    <social.icon size={18} className="text-neutral-600 dark:text-neutral-400" />
+                    <social.icon size={16} className="sm:w-[18px] sm:h-[18px] text-neutral-600 dark:text-neutral-400" />
                   </motion.a>
                 ))}
               </div>
@@ -206,10 +206,10 @@ export const Footer: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: sectionIndex * 0.1 }}
             >
-              <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-4 font-display">
+              <h4 className="font-semibold text-neutral-900 dark:text-neutral-100 mb-3 sm:mb-4 font-display text-sm sm:text-base">
                 {section.title}
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
                     {link.external ? (
@@ -217,15 +217,15 @@ export const Footer: React.FC = () => {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-sm text-neutral-600 dark:text-neutral-400 hover:text-kenya-green dark:hover:text-kenya-green transition-colors duration-300"
+                        className="flex items-center space-x-1 sm:space-x-2 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-kenya-green dark:hover:text-kenya-green transition-colors duration-300"
                       >
                         <span>{link.name}</span>
-                        <ExternalLink size={12} />
+                        <ExternalLink size={10} className="sm:w-3 sm:h-3" />
                       </a>
                     ) : (
                       <Link
                         to={link.href}
-                        className="text-sm text-neutral-600 dark:text-neutral-400 hover:text-kenya-green dark:hover:text-kenya-green transition-colors duration-300"
+                        className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 hover:text-kenya-green dark:hover:text-kenya-green transition-colors duration-300"
                       >
                         {link.name}
                       </Link>
@@ -239,13 +239,13 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-neutral-200 dark:border-neutral-700">
-        <div className="container-kenya py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="text-sm text-neutral-600 dark:text-neutral-400">
+      <div className="border-t border-neutral-300 dark:border-neutral-700">
+        <div className="container-kenya py-3 sm:py-4 md:py-6">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-2 sm:space-y-4 md:space-y-0">
+            <div className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
               &copy; {currentYear} JuaGava Civic Platform. All rights reserved.
             </div>
-            <div className="flex items-center space-x-6 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="flex items-center space-x-3 sm:space-x-6 text-xs sm:text-sm text-neutral-600 dark:text-neutral-400">
               <span>Made with ❤️ for Kenya</span>
               <span>•</span>
               <span>Accessibility Compliant</span>
