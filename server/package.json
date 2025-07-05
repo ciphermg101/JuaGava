@@ -1,0 +1,29 @@
+{
+   "name": "server",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "ts-node src/index.ts",
+      "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+      "migration:generate": "pnpm typeorm migration:generate -d src/data-source.ts",
+      "migration:run": "pnpm typeorm migration:run -d src/data-source.ts"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "packageManager": "pnpm@10.11.0",
+   "dependencies": {
+      "dotenv": "^17.0.1",
+      "pg": "^8.14.1",
+      "reflect-metadata": "^0.2.2",
+      "typeorm": "0.3.25"
+   },
+   "devDependencies": {
+      "@types/node": "^24.0.10",
+      "ts-node": "^10.9.2",
+      "tsconfig-paths": "^4.2.0",
+      "typescript": "^5.8.3"
+   }
+}

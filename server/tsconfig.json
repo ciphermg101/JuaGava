@@ -1,0 +1,23 @@
+{
+   "compilerOptions": {
+      "lib": [
+         "es2021"
+      ],
+      "target": "es2021",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./build",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "sourceMap": true,
+      "baseUrl": "./src",
+      "paths": {
+         "@entity/*": ["entity/*"],
+         "@migration/*": ["migration/*"]
+      },
+      "rootDir": "./src",
+      "strict": true,
+      "esModuleInterop": true
+   },
+   "include": ["src/**/*"]
+}
